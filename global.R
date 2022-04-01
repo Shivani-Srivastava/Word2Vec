@@ -1,7 +1,7 @@
 library(doc2vec)
 library(udpipe)
 library(stringr)
-
+library(dplyr)
 
 #ui_data_file = readLines('https://raw.githubusercontent.com/sudhir-voleti/sample-data-sets/master/text%20analysis%20data/amazon%20nokia%20lumia%20reviews.txt')
 
