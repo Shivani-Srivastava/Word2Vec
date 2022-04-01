@@ -18,7 +18,7 @@ shinyUI(fluidPage(
     titlePanel("Word2Vec", title = div(img(src="logo.png",align='right'),"Word2Vec")),
 
     sidebarLayout(
-        sidebarPanel(fileInput("file", "Upload data"),
+        sidebarPanel(fileInput("file", "Upload data (ONLY TXT FILES)"),
                      uiOutput('id_var'),
                      uiOutput("doc_var"),
                      textInput('word_inp','Enter terms separated by commas'),
