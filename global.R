@@ -87,6 +87,11 @@ VectorFunction <- function(ui_data_file, word_inp, doc_inp, n0, k, d, model_dm =
                        cluster = a0$cluster) # downloadable tbl
 #output_store_list[[4]] = clus_outp
 
+  
+  word2word_outp = as.data.frame(word2word_outp) %>% mutate_if(is.numeric, round, digits = 3)
+  word2doc_outp = as.data.frame(word2doc_outp) %>% mutate_if(is.numeric, round, digits = 3)
+  doc2doc_outp = as.data.frame(doc2doc_outp) %>% mutate_if(is.numeric, round, digits = 3)
+  
   output_store_list = list(word2word_outp, word2doc_outp, doc2doc_outp, clus_outp)
 
 #head(clus_outp, 10) # for display in the tab
