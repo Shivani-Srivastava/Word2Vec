@@ -51,9 +51,9 @@ shinyServer(function(input, output) {
         selectInput("doc_id","Select ID Column",choices = cols())
     })
     
-    output$doc_var <- renderUI({
-        selectInput("ui_data_file","Select Text Column",choices = y_col())
-    })
+    #output$doc_var <- renderUI({
+    #    selectInput("ui_data_file","Select Text Column",choices = y_col())
+    #})
     
     Outputs = reactive({VectorFunction(dataset(), input$word_inp, input$doc_inp, input$n0, input$k, input$d, input$model_dm)})
     
